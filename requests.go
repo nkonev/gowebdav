@@ -71,7 +71,7 @@ func (c *Client) mkcol(path string) int {
 	}
 	defer rs.Body.Close()
 
-	if rs.StatusCode == 201 || rs.StatusCode == 405 {
+	if rs.StatusCode == 201 {
 		return 201
 	}
 
